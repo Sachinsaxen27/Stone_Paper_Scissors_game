@@ -1,0 +1,240 @@
+body {
+    background-color: #8CC461;
+    font-family: "Roboto", serif;
+
+}
+
+p {
+    margin: 0px;
+}
+
+.scoreboard {
+    display: flex;
+    border: 2px solid white;
+    width: auto;
+    height: auto;
+    align-items: center;
+    border-radius: 13px;
+    margin: auto;
+    margin-top: 4rem;
+    width: 80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.scoreboardfirstdiv {
+    width: 200px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.scoreboardfirstdiv span {
+    top: 163px;
+    left: 259px;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 46.88px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #ffff;
+}
+
+.scoreboardseconddiv {
+    display: flex;
+}
+
+.scorerunner {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    width: 120px;
+    padding: 5PX;
+    text-align: center;
+    border-radius: 9px;
+    margin: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #656565;
+}
+
+.scoreNum {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 1rem 0 0.5rem 0;
+    color: #252525;
+}
+
+.scorerunner {
+    font-weight: 500;
+}
+
+.gameoption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.insidegameoption {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 52px;
+}
+
+.option1 {
+    background-color: #ffff;
+    text-align: center;
+    border-radius: 93px;
+    width: 100px;
+    height: 100px;
+    border: 21px solid #0074B6;
+}
+
+.option1:hover {
+    box-shadow: 0px 0px 10px 2px #0074B6;
+}
+
+.option2 {
+    background-color: #ffff;
+    text-align: center;
+    border-radius: 93px;
+    width: 100px;
+    height: 100px;
+    border: 21px solid #BD00FF;
+}
+
+.option2:hover {
+    box-shadow: 0px 0px 10px 2px #BD00FF;
+}
+
+.option3 {
+    background-color: #ffff;
+    text-align: center;
+    border-radius: 93px;
+    width: 100px;
+    height: 100px;
+    border: 21px solid #FFA943;
+}
+
+.option3:hover {
+    box-shadow: 0px 0px 10px 2px #FFA943;
+}
+
+.connectionline1 {
+    width: 110px;
+    border: 9px solid #5a5858;
+    height: 0px;
+    position: relative;
+    top: 61px;
+}
+
+.connectionline2 {
+    width: 148px;
+    border: 9px solid #5a5858;
+    height: 0px;
+    transform: rotate(60deg);
+    position: relative;
+    /* top: 25px; */
+    right: 80px;
+    z-index: -1;
+}
+
+.connectionline3 {
+    width: 146px;
+    border: 9px solid #5a5858;
+    height: 0px;
+    transform: rotate(120deg);
+    position: relative;
+    left: 85px;
+    bottom: 16px;
+    z-index: -1;
+}
+
+.rulebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.buttonbox{
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+}
+.rulebutton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #ffff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffff;
+    width: 140px;
+}
+.rulescontent {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 75px;
+    background-color: #004429;
+    color: #ffff;
+    border: 5px solid #ffff;
+    width: 280px;
+    height: auto;
+    right: 20px;
+    border-radius: 13px;
+    text-align: center;
+}
+
+.listrules li {
+    width: 216px;
+    margin-bottom: 10px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.23px;
+    text-align: justify;
+
+}
+
+.listrules li::marker {
+    color: #FFD600;
+    font-size: 24px;
+    /* margin-top: 10px; */
+}
+
+.closebutton {
+    text-align: center;
+    border: 5px solid #ffff;
+    background-color: red;
+    border-radius: 40px;
+    height: 35px;
+    width: 36px;
+    position: absolute;
+    left: 254px;
+    bottom: 300px;
+    cursor: pointer;
+}
+
+.playagainbutton {
+    width: 200px;
+    height: auto;
+    padding: 12px;
+    border-radius: 11px;
+    border: none;
+    color: #6B6B6B;
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}

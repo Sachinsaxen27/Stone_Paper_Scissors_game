@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Playwrite+TZ+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="display: block;">
+        <div class="scoreboard">
+            <div class="scoreboardfirstdiv">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div class="scoreboardseconddiv">
+                <div class="scorerunner">
+                    <p>COMPUTER SCORE</p>
+                    <p class="scoreNum" id="computerscore"></p>
+                </div>
+                <div class="scorerunner">
+                    <p> YOUR<br> SCORE</p>
+                    <p class="scoreNum" id="playerscore"></p>
+                </div>
+            </div>
+        </div>
+        <div class="gameoption" id="play-option">
+            <div class="insidegameoption">
+                <div class="option1" onclick="optioninput('Rock')">
+                    <img src="./image/Rock.png" alt="Rock" style="padding-top: 16px;">
+                </div>
+                <div class="connectionline1"> &nbsp;</div>
+                <div class="option2" onclick="optioninput('Scissor')">
+                    <img src="./image/Scissor.png" alt="Scissor" style="width: 60px; padding-top: 15px;">
+                </div>
+            </div>
+            <div class="connectionline2"> &nbsp;</div>
+            <div class="connectionline3"> &nbsp;</div>
+            <div class="option3" onclick="optioninput('Paper')">
+                <img src="./image/Paper.png" alt="Paper" style="padding-top: 15px;">
+            </div>
+        </div>
+        <div class="rulebox">
+            <div class="rulescontent" id="ruleboxcontainer">
+                <div class="closebutton" onclick="handleruleboxclose()">
+                    <i class="fa-solid fa-xmark" style="position: relative;top: 7px;font-size: 21px;"></i>
+                </div>
+                <h1>Game Rules</h1>
+                <ul style="list-style: square; text-align: justify;padding-right: 49px;" class="listrules">
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper, scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div>
+            <div class="buttonbox">
+                <button class="rulebutton" onclick="handlerulebox()">RULES</button>
+                <a href="Hurraypage.html" style="text-decoration: none;"><button class="rulebutton" id="hurraypage" style="text-transform: uppercase;display: none;">next</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- For player winning -->
+    <div id="playerwinsss"
+        style="display: none; justify-content: space-evenly; width:80%;  margin: auto; margin-top: 14rem; height: 100%;">
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <!-- style="position:absolute;top: 214px;left: 20.7rem; font-size: 18px;color: whitesmoke;" -->
+            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
+            <div id="playerwin">
+                <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;">
+                    <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;">
+                        <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;">
+                            <div id="player">
+                                <img id="enterimage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
+            <p
+                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
+                You Win Against PC</p>
+            <button
+                style=" width: 50%;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;"
+                onclick="playagain('playerwin')">Play
+                Again</button>
+        </div>
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="position: relative;
+            bottom: 2rem;
+            font-size: 18px;
+            color: white;">ComputerPicked</p>
+            <div id="computerwin">
+                <div id="computer">
+                    <img id="entercomimage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--For PC Winning  -->
+    <div id="computerwinss"
+        style="display: none; justify-content: space-evenly; width:80%;  margin: auto; margin-top: 14rem; height: 100%;">
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
+            <div id="playerwin">
+                <div id="aplayer">
+                    <img id="enterimages">
+                </div>
+            </div>
+        </div>
+        <div
+            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
+            <p
+                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
+                PC Win Against You</p>
+            <button
+                style=" width: 50%;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;"
+                onclick="playagain('computerwins')">Play
+                Again</button>
+        </div>
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="position: relative;
+            bottom: 2rem;
+            font-size: 18px;
+            color: white;">ComputerPicked</p>
+            <div id="computerwin">
+                <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;">
+                    <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;">
+                        <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;">
+                            <div id="acomputer">
+                                <img id="entercomimages">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- For Draw -->
+    <div id="drawresult"
+        style="display: none; justify-content: space-evenly; width:80%;  margin: auto; margin-top: 14rem; height: 100%;">
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">YOU PICKED</p>
+            <div id="computerwin">
+                <div id="drawplayer">
+                    <img id="imagedrawpla">
+                </div>
+            </div>
+        </div>
+        <div
+            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
+            <p
+                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
+                TIE UP</p>
+            <button
+                style=" width: 50%;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;text-transform: capitalize;"
+                onclick="playagain('draw')">Play Again</button>
+        </div>
+        <div style="display: flex;flex-direction: column;align-items: center;">
+            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white; text-transform:capitalize;">COMPUTER
+                PICKED</p>
+            <div id="computerwin">
+                <div id="drawcomp">
+                    <img id="imagedrawcom">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/231d32e1fe.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
