@@ -253,9 +253,6 @@ p {
 .outerglow {
     animation: outer-glow-animation 2s infinite;
 }
-
-
-
 @keyframes glow-animation {
     0% {
         border-radius: 160px;
