@@ -241,16 +241,16 @@ p {
     margin-top: 10px;
     text-transform: uppercase;
 }
-
+.innerglow1,
 .innerglow {
     animation: glow-animation 2s infinite;
 }
 
-.midglow2 {
+.midglow22,.midglow2 {
     animation: mid-glow-animation 2s infinite;
 }
 
-.outerglow {
+.outerglow1,.outerglow {
     animation: outer-glow-animation 2s infinite;
 }
 @keyframes glow-animation {
