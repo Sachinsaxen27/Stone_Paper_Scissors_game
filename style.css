@@ -164,14 +164,16 @@ p {
     justify-content: flex-end;
     align-items: flex-end;
 }
-.buttonbox{
+
+.buttonbox {
     position: fixed;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     gap: 10px;
 }
+
 .rulebutton {
     padding: 10px 20px;
     font-size: 16px;
@@ -182,6 +184,7 @@ p {
     color: #ffff;
     width: 140px;
 }
+
 .rulescontent {
     display: none;
     position: fixed;
@@ -237,4 +240,61 @@ p {
     font-size: 18px;
     margin-top: 10px;
     text-transform: uppercase;
+}
+
+.innerglow {
+    animation: glow-animation 2s infinite;
+}
+
+.midglow2 {
+    animation: mid-glow-animation 2s infinite;
+}
+
+.outerglow {
+    animation: outer-glow-animation 2s infinite;
+}
+
+
+
+@keyframes glow-animation {
+    0% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 30px #2E9A2563;
+    }
+    50% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 40px #2E9A2563;
+    }
+    100% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 30px #2E9A2563;
+    }
+}
+@keyframes mid-glow-animation {
+    0% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 55px #1DA82BC9;
+    }
+    50% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 65px #1DA82BC9;
+    }
+    100% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 1px 55px #1DA82BC9;
+    }
+}
+@keyframes outer-glow-animation {
+    0% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 8px 80px #2E9A2563;
+    }
+    50% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 8px 90px #2E9A2563;
+    }
+    100% {
+        border-radius: 160px;
+        box-shadow: 0px 0px 8px 80px #2E9A2563;
+    }
 }

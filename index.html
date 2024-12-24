@@ -74,9 +74,12 @@
         <div style="display: flex;flex-direction: column;align-items: center;">
            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
             <div id="playerwin">
-                <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;">
-                    <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;">
-                        <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;">
+                <div class="outerglow">
+                <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;"> -->
+                    <div class="midglow2">
+                    <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;"> -->
+                        <div class="innerglow">
+                        <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;"> -->
                             <div id="player">
                                 <img id="enterimage">
                             </div>
@@ -91,7 +94,7 @@
                 style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
                 You Win Against PC</p>
             <button
-                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;"
+                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px; cursor: pointer;"
                 onclick="playagain('playerwin')">Play
                 Again</button>
         </div>
@@ -124,7 +127,7 @@
                 style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
                 PC Win Against You</p>
             <button
-                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;"
+                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px; cursor: pointer;"
                 onclick="playagain('computerwins')">Play
                 Again</button>
         </div>
@@ -134,9 +137,12 @@
             font-size: 18px;
             color: white;">ComputerPicked</p>
             <div id="computerwin">
-                <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;">
-                    <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;">
-                        <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;">
+                <div class="outerglow">
+                <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 8px 80px #2E9A2563;"> -->
+                    <div class="midglow2">
+                    <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 1px 55px #1DA82BC9;"> -->
+                        <div class="innerglow">
+                        <!-- <div style="border-radius: 160px;box-shadow: 0px 0px 1px 30px #2E9A2563;"> -->
                             <div id="acomputer">
                                 <img id="entercomimages">
                             </div>
@@ -164,7 +170,7 @@
                 style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
                 TIE UP</p>
             <button
-                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;text-transform: capitalize;"
+                style="cursor: pointer; width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;text-transform: capitalize;"
                 onclick="playagain('draw')">Play Again</button>
         </div>
         <div style="display: flex;flex-direction: column;align-items: center;">
