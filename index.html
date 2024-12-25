@@ -64,15 +64,15 @@
             </div>
             <div class="buttonbox">
                 <button class="rulebutton" onclick="handlerulebox()">RULES</button>
-                <a href="Hurraypage.html" style="text-decoration: none;"><button class="rulebutton" id="hurraypage" style="text-transform: uppercase;display: none;">next</button></a>
+                <a href="Hurraypage.html" style="text-decoration: none;"><button class="rulebutton" id="hurraypage"
+                        style="text-transform: uppercase;display: none;">next</button></a>
             </div>
-        </div> 
+        </div>
     </div>
     <!-- For player winning -->
-    <div id="playerwinsss"
-        style="display: none; justify-content: space-evenly; width:65rem;gap: 5vw; margin: auto; margin-top: 14rem; height: 100%;">
+    <div id="playerwinsss" class="winningdiv">
         <div style="display: flex;flex-direction: column;align-items: center;">
-           <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
+            <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
             <div id="playerwin">
                 <div class="outerglow">
                     <div class="midglow2">
@@ -85,14 +85,9 @@
                 </div>
             </div>
         </div>
-        <div
-            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
-            <p
-                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
-                You Win Against PC</p>
-            <button
-                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px; cursor: pointer;"
-                onclick="playagain('playerwin')">Play
+        <div class="resultpara">
+            <p>You Win Against PC</p>
+            <button class="buttonplay" onclick="playagain('playerwin')">Play
                 Again</button>
         </div>
         <div style="display: flex;flex-direction: column;align-items: center;">
@@ -108,8 +103,7 @@
         </div>
     </div>
     <!--For PC Winning  -->
-    <div id="computerwinss"
-        style="display: none; justify-content: space-evenly; width:65rem;  margin: auto; margin-top: 14rem; height: 100%;">
+    <div id="computerwinss" class="winningdiv">
         <div style="display: flex;flex-direction: column;align-items: center;">
             <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">You Picked</p>
             <div id="playerwin">
@@ -118,14 +112,9 @@
                 </div>
             </div>
         </div>
-        <div
-            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
-            <p
-                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
-                PC Win Against You</p>
-            <button
-                style=" width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px; cursor: pointer;"
-                onclick="playagain('computerwins')">Play
+        <div class="resultpara">
+            <p>PC Win Against You</p>
+            <button class="buttonplay" onclick="playagain('computerwins')">Play
                 Again</button>
         </div>
         <div style="display: flex;flex-direction: column;align-items: center;">
@@ -148,8 +137,7 @@
         </div>
     </div>
     <!-- For Draw -->
-    <div id="drawresult"
-        style="display: none; justify-content: space-evenly; width:65rem;  margin: auto; margin-top: 14rem; height: 100%;">
+    <div id="drawresult" class="winningdiv">
         <div style="display: flex;flex-direction: column;align-items: center;">
             <p style="position: relative;bottom: 2rem;font-size: 18px;color: white;">YOU PICKED</p>
             <div id="computerwin">
@@ -158,14 +146,9 @@
                 </div>
             </div>
         </div>
-        <div
-            style="  width: 30%;text-align: center;display: flex;flex-direction: column;align-items: center;color: whitesmoke;">
-            <p
-                style="font-family: Roboto;font-size: 39px;font-weight: 800;line-height: 45.7px;letter-spacing: 0.1em;text-align: center;width: 82%;">
-                TIE UP</p>
-            <button
-                style="cursor: pointer; width: 200px;height: auto;padding: 12px;border-radius: 11px;border: none;color: #6B6B6B;font-size: 18px;margin-top: 10px;text-transform: capitalize;"
-                onclick="playagain('draw')">Play Again</button>
+        <div class="resultpara">
+            <p>TIE UP</p>
+            <button class="buttonplay" onclick="playagain('draw')">Play Again</button>
         </div>
         <div style="display: flex;flex-direction: column;align-items: center;">
             <p style="position: relative;bottom: 2rem;font-size: 18px;color: white; text-transform:capitalize;">COMPUTER
